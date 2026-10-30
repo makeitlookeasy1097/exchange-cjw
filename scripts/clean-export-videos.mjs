@@ -16,7 +16,8 @@ async function removeExportedVideos(directory) {
       await removeExportedVideos(path);
     } else if (/\.(?:mp4|webm|mov)$/i.test(entry.name)) {
       const file = await stat(path);
-      if (file.size > 100 * 1024 * 1024) await rm(path);
+      const replacedByYouTube = new Set(["reels_v1.mp4", "reels_v2.mp4", "사진 34.mp4", "이안 편의점.mp4"]).has(entry.name);
+      if (file.size > 100 * 1024 * 1024 || replacedByYouTube) await rm(path);
     }
   }));
 }

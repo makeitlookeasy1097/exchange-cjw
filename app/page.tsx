@@ -10,6 +10,7 @@ import { PHOTO_ASSETS } from "./photos-data";
 import { assetUrl } from "./asset-url";
 const WALLPAPER_URL = "/지우%20배경화면.jpg";
 const youtubeEmbedUrl = (id, autoplay = false)=>"https://www.youtube-nocookie.com/embed/".concat(id, "?playsinline=1", autoplay ? "&autoplay=1" : "");
+const youtubeVideoIdFromUrl = (url)=>{ const match = typeof url === "string" && url.match(/(?:youtube(?:-nocookie)?\.com\/(?:shorts\/|embed\/|watch\?v=)|youtu\.be\/)([A-Za-z0-9_-]{11})/); return match ? match[1] : ""; };
 const initialMessages = [
     {
         from: "ia",
@@ -2823,7 +2824,7 @@ export default function Page() {
                             ]
                         }),
                         screen === "youtubeDetail" && /*#__PURE__*/ _jsxs("div", {
-                            className: "relative flex h-full flex-col overflow-y-auto bg-white pb-[96px] text-black",
+                            className: "relative flex h-full min-h-0 flex-col overflow-y-auto bg-white pb-[96px] text-black",
                             children: [
                                 /*#__PURE__*/ _jsx(StatusBar, {
                                     dark: true
@@ -3016,7 +3017,7 @@ export default function Page() {
                                     })
                                 }),
                                 /*#__PURE__*/ _jsxs("nav", {
-                                    className: "absolute bottom-7 left-0 right-0 z-20 flex h-[66px] shrink-0 items-center justify-around border-t border-gray-200 bg-white px-1 text-[9px]",
+                                    className: "sticky bottom-7 z-20 flex h-[66px] shrink-0 items-center justify-around border-t border-gray-200 bg-white px-1 text-[9px]",
                                     children: [
                                         [
                                             { name: "홈", icon: /*#__PURE__*/ _jsx(House, { size: 21 }) },
@@ -3169,7 +3170,7 @@ export default function Page() {
                                                             },
                                                             className: "relative flex aspect-[3/4] items-center justify-center bg-[#f0f0f0]",
                                                             children: [
-                                                                image ? isVideoAsset(image) ? /*#__PURE__*/ _jsx("video", {
+                                                                image ? youtubeVideoIdFromUrl(image) ? /*#__PURE__*/ _jsx("iframe", { src: youtubeEmbedUrl(youtubeVideoIdFromUrl(image)), title: "Instagram 영상", allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share", allowFullScreen: true, className: "h-full w-full border-0" }) : isVideoAsset(image) ? /*#__PURE__*/ _jsx("video", {
                                                                     src: assetUrl(image),
                                                                     controls: true,
                                                                     playsInline: true,
@@ -3561,7 +3562,7 @@ export default function Page() {
                                                     },
                                                     className: "relative flex aspect-[3/4] items-center justify-center bg-gray-100",
                                                     children: [
-                                                        image ? isVideoAsset(image) ? /*#__PURE__*/ _jsx("video", {
+                                                        image ? youtubeVideoIdFromUrl(image) ? /*#__PURE__*/ _jsx("iframe", { src: youtubeEmbedUrl(youtubeVideoIdFromUrl(image)), title: "Instagram 영상", allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share", allowFullScreen: true, className: "h-full w-full border-0" }) : isVideoAsset(image) ? /*#__PURE__*/ _jsx("video", {
                                                             src: assetUrl(image),
                                                             controls: true,
                                                             playsInline: true,
@@ -4048,7 +4049,7 @@ export default function Page() {
                                 }),
                                 /*#__PURE__*/ _jsx("div", {
                                     className: "flex flex-1 items-center justify-center",
-                                    children: ((_PHOTO_ASSETS_selectedPhotoIndex = PHOTO_ASSETS[selectedPhotoIndex]) === null || _PHOTO_ASSETS_selectedPhotoIndex === void 0 ? void 0 : _PHOTO_ASSETS_selectedPhotoIndex.type) === "video" ? /*#__PURE__*/ _jsx("video", {
+                                    children: PHOTO_ASSETS[selectedPhotoIndex]?.type === "youtube" ? /*#__PURE__*/ _jsx("iframe", { src: youtubeEmbedUrl(youtubeVideoIdFromUrl(PHOTO_ASSETS[selectedPhotoIndex].videoUrl), true), title: PHOTO_ASSETS[selectedPhotoIndex].name, allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share", allowFullScreen: true, className: "h-full w-full border-0" }) : PHOTO_ASSETS[selectedPhotoIndex]?.type === "video" ? /*#__PURE__*/ _jsx("video", {
                                         src: assetUrl((_PHOTO_ASSETS_selectedPhotoIndex1 = PHOTO_ASSETS[selectedPhotoIndex]) === null || _PHOTO_ASSETS_selectedPhotoIndex1 === void 0 ? void 0 : _PHOTO_ASSETS_selectedPhotoIndex1.src),
                                         controls: true,
                                         autoPlay: true,
