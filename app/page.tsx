@@ -1077,11 +1077,11 @@ export default function Page() {
     const lockBg = "absolute inset-0 bg-[radial-gradient(ellipse_at_75%_22%,rgba(255,224,206,.75),transparent_33%),radial-gradient(ellipse_at_18%_78%,rgba(86,105,105,.72),transparent_38%),linear-gradient(145deg,#373a40,#9a8d82_48%,#293038)]";
     const lockClass = "flex h-full flex-col transition-[transform,opacity] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ".concat(unlocking ? "-translate-y-full opacity-0" : "translate-y-0 opacity-100");
     return /*#__PURE__*/ _jsx("main", {
-        className: "flex min-h-screen items-center justify-center overflow-hidden bg-[#08090c] p-2 sm:p-6",
+        className: "flex h-[100svh] min-h-0 items-center justify-center overflow-hidden overscroll-none bg-[#08090c] p-2 sm:h-auto sm:min-h-screen sm:p-6",
         children: /*#__PURE__*/ _jsxs("div", {
             onTouchStart: startY,
             onTouchEnd: endY,
-            className: "phone-shell relative h-[min(844px,calc(100dvh-16px))] w-[min(390px,calc(100vw-16px))] overflow-hidden rounded-[42px] border border-white/15 bg-black sm:h-[min(844px,calc(100dvh-48px))]",
+            className: "phone-shell relative h-[844px] w-[390px] overflow-hidden rounded-[42px] border border-white/15 bg-black sm:h-[min(844px,calc(100svh-48px))] sm:w-[min(390px,calc(100vw-48px))]",
             children: [
                 /*#__PURE__*/ _jsxs("div", {
                     className: "".concat(lockBg, " bg-[#111]"),
