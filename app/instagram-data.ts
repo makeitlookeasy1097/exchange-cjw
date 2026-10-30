@@ -56,5 +56,5 @@ export const INSTAGRAM_PROFILE_GRID: { images: string[]; caption: string; captio
   },
   { images: ["/사진 7.jpg"], caption: "이 날 최지우 왤케 강아지 같지?ㅋㅋ 강아지우🐶" },
   { images: ["/사진 5.jpg", "/사진 6.jpg"], caption: "우리 이때 진짜 어렸당... 야구 또 보러 가장!" },
-  { images: ["/사진 1.jpg", "/사진 2.jpg"], caption: "앞으로 생일 계속 챙겨줄게" },
+  { images: ["/사진 1.jpg", "/사진 2.jpg"], caption: "우리 이제 헤어지지 말자.." },
 ];
