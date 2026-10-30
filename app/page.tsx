@@ -2824,11 +2824,15 @@ export default function Page() {
                             ]
                         }),
                         screen === "youtubeDetail" && /*#__PURE__*/ _jsxs("div", {
-                            className: "relative flex h-full min-h-0 flex-col overflow-y-auto bg-white pb-[96px] text-black",
+                            className: "relative flex h-full flex-col overflow-hidden bg-white text-black",
                             children: [
                                 /*#__PURE__*/ _jsx(StatusBar, {
                                     dark: true
                                 }),
+                                /*#__PURE__*/ _jsx("div", {
+                                    className: "min-h-0 flex-1 overflow-y-auto pb-[96px]",
+                                    children: /*#__PURE__*/ _jsxs(_Fragment, {
+                                        children: [
                                 /*#__PURE__*/ _jsxs("div", {
                                     className: "relative aspect-video shrink-0 bg-black",
                                     children: [
@@ -3009,6 +3013,9 @@ export default function Page() {
                                             ]
                                         }, nextVideo.youtubeId || index))
                                 }),
+                                        ]
+                                    })
+                                }),
                                 /*#__PURE__*/ _jsx("div", {
                                     className: "absolute bottom-0 left-0 right-0 z-20 flex h-7 items-center justify-center bg-white pb-1",
                                     children: /*#__PURE__*/ _jsx("div", {
@@ -3017,7 +3024,7 @@ export default function Page() {
                                     })
                                 }),
                                 /*#__PURE__*/ _jsxs("nav", {
-                                    className: "sticky bottom-7 z-20 flex h-[66px] shrink-0 items-center justify-around border-t border-gray-200 bg-white px-1 text-[9px]",
+                                    className: "absolute bottom-7 left-0 right-0 z-20 flex h-[66px] shrink-0 items-center justify-around border-t border-gray-200 bg-white px-1 text-[9px]",
                                     children: [
                                         [
                                             { name: "홈", icon: /*#__PURE__*/ _jsx(House, { size: 21 }) },
