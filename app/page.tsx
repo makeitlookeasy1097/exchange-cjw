@@ -4059,6 +4059,13 @@ export default function Page() {
                                         autoPlay: true,
                                         muted: true,
                                         className: "max-h-full w-full"
+                                    }) : PHOTO_ASSETS[selectedPhotoIndex]?.type === "gif" ? /*#__PURE__*/ _jsx("div", {
+                                        className: "aspect-[3/4] w-[min(100%,52.5vh)] overflow-hidden",
+                                        children: /*#__PURE__*/ _jsx("img", {
+                                            src: assetUrl((_PHOTO_ASSETS_selectedPhotoIndex2 = PHOTO_ASSETS[selectedPhotoIndex]) === null || _PHOTO_ASSETS_selectedPhotoIndex2 === void 0 ? void 0 : _PHOTO_ASSETS_selectedPhotoIndex2.src),
+                                            alt: "",
+                                            className: "h-full w-full object-cover"
+                                        })
                                     }) : /*#__PURE__*/ _jsx("img", {
                                         src: assetUrl((_PHOTO_ASSETS_selectedPhotoIndex2 = PHOTO_ASSETS[selectedPhotoIndex]) === null || _PHOTO_ASSETS_selectedPhotoIndex2 === void 0 ? void 0 : _PHOTO_ASSETS_selectedPhotoIndex2.src),
                                         className: "max-h-full max-w-full object-contain"
