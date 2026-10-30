@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="64" fill="#fff"/>
+  <text x="256" y="112" text-anchor="middle" font-family="Arial, sans-serif" font-size="57" fill="#f33">Thursday</text>
+  <text x="256" y="365" text-anchor="middle" font-family="Arial, sans-serif" font-size="260" fill="#111">29</text>
+</svg>

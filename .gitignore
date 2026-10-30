@@ -1,0 +1,16 @@
+node_modules/
+.next/
+out/
+work/
+outputs/
+.preview-*.log
+*.tsbuildinfo
+.env*
+!.env.example
+
+# 큰 원본 영상은 로컬에 보존하고 GitHub에는 올리지 않습니다.
+public/*.mp4
+!public/reels_v1.mp4
+!public/reels_v2.mp4
+!public/사진 34.mp4
+!public/이안 편의점.mp4
