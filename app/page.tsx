@@ -647,7 +647,7 @@ function CalendarMini(param) {
     let { onClick } = param;
     return /*#__PURE__*/ _jsxs("button", {
         onClick: onClick,
-        className: "w-[150px] rounded-[20px] bg-white/90 p-3 text-left text-gray-900 shadow-lg backdrop-blur-xl",
+        className: "w-[150px] justify-self-center rounded-[20px] bg-white/90 p-3 text-left text-gray-900 shadow-lg backdrop-blur-xl",
         children: [
             /*#__PURE__*/ _jsxs("div", {
                 className: "mb-1 flex items-center justify-between text-[10px] font-semibold text-red-500",
@@ -1271,7 +1271,7 @@ export default function Page() {
                                     className: "grid grid-cols-2 gap-3 px-5 pt-[74px]",
                                     children: [
                                         /*#__PURE__*/ _jsxs("div", {
-                                            className: "h-[146px] rounded-[22px] bg-gradient-to-br from-[#62b4ff] via-[#3291f5] to-[#3165d7] p-3 shadow-xl",
+                                            className: "h-[146px] w-[150px] justify-self-center rounded-[22px] bg-gradient-to-br from-[#62b4ff] via-[#3291f5] to-[#3165d7] p-3 shadow-xl",
                                             children: [
                                                 /*#__PURE__*/ _jsxs("div", {
                                                     className: "flex items-center gap-1 text-[12px] font-semibold",
@@ -1309,7 +1309,7 @@ export default function Page() {
                                     ]
                                 }),
                                 /*#__PURE__*/ _jsx("div", {
-                                    className: "mt-[48px] grid grid-cols-4 gap-y-7 px-5",
+                                    className: "mt-[48px] grid grid-cols-4 justify-items-center gap-y-7 px-5",
                                     children: HOME_APPS.map((app)=>/*#__PURE__*/ _jsx(AppIcon, {
                                             label: app.label,
                                             icon: APP_ICONS[app.icon],
