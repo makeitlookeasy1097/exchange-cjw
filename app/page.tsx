@@ -2830,7 +2830,7 @@ export default function Page() {
                                     dark: true
                                 }),
                                 /*#__PURE__*/ _jsx("div", {
-                                    className: "min-h-0 flex-1 overflow-y-auto pb-[96px]",
+                                    className: "order-1 min-h-0 flex-1 overflow-y-auto",
                                     children: /*#__PURE__*/ _jsxs(_Fragment, {
                                         children: [
                                 /*#__PURE__*/ _jsxs("div", {
@@ -3017,14 +3017,14 @@ export default function Page() {
                                     })
                                 }),
                                 /*#__PURE__*/ _jsx("div", {
-                                    className: "absolute bottom-0 left-0 right-0 z-20 flex h-7 items-center justify-center bg-white pb-1",
+                                    className: "relative z-20 order-3 flex h-7 shrink-0 items-center justify-center bg-white pb-1",
                                     children: /*#__PURE__*/ _jsx("div", {
                                         onClick: goHome,
                                         className: "h-[5px] w-[134px] rounded-full bg-black"
                                     })
                                 }),
                                 /*#__PURE__*/ _jsxs("nav", {
-                                    className: "absolute bottom-7 left-0 right-0 z-20 flex h-[66px] shrink-0 items-center justify-around border-t border-gray-200 bg-white px-1 text-[9px]",
+                                    className: "relative z-20 order-2 flex h-[66px] shrink-0 items-center justify-around border-t border-gray-200 bg-white px-1 text-[9px]",
                                     children: [
                                         [
                                             { name: "홈", icon: /*#__PURE__*/ _jsx(House, { size: 21 }) },
@@ -3431,8 +3431,8 @@ export default function Page() {
                                                         setScreen("instagramPost");
                                                     },
                                                     className: "relative aspect-[3/4] cursor-pointer bg-gray-100",
-                                                    children: userImages["ig-grid-".concat(i, "-0")] || post.images[0] ? /*#__PURE__*/ _jsx("img", {
-                                                        src: assetUrl(userImages["ig-grid-".concat(i, "-0")] || post.images[0]),
+                                                    children: post.images[0] || userImages["ig-grid-".concat(i, "-0")] ? /*#__PURE__*/ _jsx("img", {
+                                                        src: assetUrl(post.images[0] || userImages["ig-grid-".concat(i, "-0")]),
                                                         alt: post.caption,
                                                         className: "h-full w-full object-cover"
                                                     }) : /*#__PURE__*/ _jsxs(_Fragment, {
@@ -3527,7 +3527,7 @@ export default function Page() {
                                         var _instagramCarousel_;
                                         const profileSlide = (_instagramCarousel_ = instagramCarousel[100 + instagramPostIndex]) !== null && _instagramCarousel_ !== void 0 ? _instagramCarousel_ : 0;
                                         var _instagramCarousel_instagramPostIndex;
-                                        const image = instagramShowingProfilePost ? userImages["ig-grid-".concat(instagramPostIndex, "-").concat(profileSlide)] || gridPost.images[profileSlide] : userImages["ig-post-".concat(instagramPostIndex)] || post.images[(_instagramCarousel_instagramPostIndex = instagramCarousel[instagramPostIndex]) !== null && _instagramCarousel_instagramPostIndex !== void 0 ? _instagramCarousel_instagramPostIndex : 0];
+                                        const image = instagramShowingProfilePost ? gridPost.images[profileSlide] || userImages["ig-grid-".concat(instagramPostIndex, "-").concat(profileSlide)] : userImages["ig-post-".concat(instagramPostIndex)] || post.images[(_instagramCarousel_instagramPostIndex = instagramCarousel[instagramPostIndex]) !== null && _instagramCarousel_instagramPostIndex !== void 0 ? _instagramCarousel_instagramPostIndex : 0];
                                         const caption = instagramShowingProfilePost ? ((_gridPost_captions = gridPost.captions) === null || _gridPost_captions === void 0 ? void 0 : _gridPost_captions[profileSlide]) || gridPost.caption : post.caption;
                                         return /*#__PURE__*/ _jsxs(_Fragment, {
                                             children: [
@@ -3876,12 +3876,9 @@ export default function Page() {
                                     className: "relative min-h-0 flex-1 overflow-hidden bg-[#161616]",
                                     children: [
                                         " ",
-                                        /*#__PURE__*/ _jsx("video", {
-                                            src: assetUrl("/%EC%9D%B4%EC%95%88%20%ED%8E%B8%EC%9D%98%EC%A0%90.mp4"),
-                                            autoPlay: true,
-                                            muted: true,
-                                            loop: true,
-                                            playsInline: true,
+                                        /*#__PURE__*/ _jsx("img", {
+                                            src: assetUrl("/%EC%9D%B4%EC%95%88%20%ED%8E%B8%EC%9D%98%EC%A0%90.gif"),
+                                            alt: "이안 편의점 영상 미리보기",
                                             className: "h-full w-full object-cover opacity-75"
                                         }),
                                         /*#__PURE__*/ _jsx("div", {
